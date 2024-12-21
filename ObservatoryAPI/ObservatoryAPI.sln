@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservatoryAPI", "ObservatoryAPI\ObservatoryAPI.csproj", "{70B8389E-F49C-480C-BE5E-D47360E7E94B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70B8389E-F49C-480C-BE5E-D47360E7E94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B8389E-F49C-480C-BE5E-D47360E7E94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B8389E-F49C-480C-BE5E-D47360E7E94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B8389E-F49C-480C-BE5E-D47360E7E94B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0E26E25-448C-47AF-8FA1-9E9A7E86AEF0}
+	EndGlobalSection
+EndGlobal

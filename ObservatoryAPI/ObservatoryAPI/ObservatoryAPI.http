@@ -1,0 +1,6 @@
+@ObservatoryAPI_HostAddress = http://localhost:5122
+
+GET {{ObservatoryAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

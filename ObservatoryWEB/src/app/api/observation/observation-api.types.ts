@@ -11,7 +11,7 @@ export interface Observation {
   name: string;
   description: string;
   properties: string;
-  scheduledTime: Date;
+  scheduledTime: string;
   spaceObjectId: number;
   equipmentId: number;
 }

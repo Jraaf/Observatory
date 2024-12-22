@@ -2,7 +2,7 @@ import { instance } from '../instance';
 import { Equipment, EquipmentDto } from './equipment-api.types';
 
 class EquipmentApi {
-  static async getAll() {
+  async getAll() {
     return await instance.get<Equipment[]>('/Equipment/GetAll');
   }
 

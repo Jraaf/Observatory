@@ -2,17 +2,31 @@ import { instance } from '../instance';
 import {
   ObservationOrder,
   ObservationOrderDto,
+  ObservationOrderWithObservation,
 } from './observation-order-api.types';
 
 class ObservationOrderApi {
-  static async getAll() {
+  async getAll() {
+    return await instance.get<ObservationOrder[]>('/ObservationOrder/GetAll');
+  }
+
+  async getMyOrders() {
+    return await instance.get<ObservationOrderWithObservation[]>(
+      '/ObservationOrder/GetMyOrders'
+    );
+  }
+
+  async getAvailableOrders() {
     return await instance.get<ObservationOrder[]>('/ObservationOrder/GetAll');
   }
 
   async getObservationOrderById(id: number) {
-    return await instance.get<ObservationOrder>(`/ObservationOrder/GetById`, {
-      params: { id },
-    });
+    return await instance.get<ObservationOrder>(
+      `/ObservationOrder/GetAvailableOrders`,
+      {
+        params: { id },
+      }
+    );
   }
 
   async createObservationOrder(body: ObservationOrderDto) {

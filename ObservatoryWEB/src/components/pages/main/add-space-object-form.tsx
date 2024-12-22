@@ -42,7 +42,7 @@ export const AddSpaceObjectForm: FC<Props> = ({}) => {
   async function onSubmit(values: TAddSpaceObject) {
     try {
       await spaceObjectApi.createSpaceObject(values);
-      toastSuccess("Ви успішно створили космічний об'єкт трек");
+      toastSuccess("Ви успішно створили космічний об'єкт");
       refresh();
       form.reset();
     } catch (error) {

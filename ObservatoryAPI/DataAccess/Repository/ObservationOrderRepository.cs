@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ObservatoryAPI.BLL;
 using ObservatoryAPI.DataAccess.EF;
 using ObservatoryAPI.DataAccess.Entities;
 using ObservatoryAPI.DataAccess.Repository.Base;
@@ -14,6 +15,18 @@ public class ObservationOrderRepository : Repo<ObservationOrder, int>, IObservat
         : base(context)
     {
         this.context = context;
+    }
+    public async new Task<ObservationOrder> AddAsync(ObservationOrder entity)
+    {
+        var order = await context.Orders
+            .FirstOrDefaultAsync(o => o.UserId == entity.UserId && o.ObservationId == entity.ObservationId);
+
+        if (order != null)
+        {
+            throw new OrderExceprion("Order is alrady placed");
+        }
+
+        return await base.AddAsync(entity);
     }
     public async new Task<List<ObservationOrder>> GetAllAsync()
     {

@@ -1,10 +1,8 @@
 export interface User {
   id: string;
   email: string;
-  firstName: string;
-  middleName: string | null;
-  lastName: string;
-  role: string;
+  username: string;
+  isAdmin: boolean;
 }
 
 export interface Session {

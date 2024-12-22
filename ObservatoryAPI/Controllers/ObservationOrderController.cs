@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ObservatoryAPI.BLL;
 using ObservatoryAPI.BLL.DTO;
 using ObservatoryAPI.BLL.Services.Interfaces;
+using System.Security.Claims;
 
 namespace ObservatoryAPI.Controllers;
 
@@ -34,6 +35,29 @@ public class ObservationOrderController(IObservationOrderService _service) : Con
         try
         {
             var data = await _service.GetAsync(id);
+            if (data != null)
+            {
+                return Ok(data);
+            }
+        }
+        catch (NotFoundException e)
+        {
+            return NotFound(e.Message);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+
+        return NoContent();
+    }
+    [HttpGet("GetMyOrders")]
+    public async Task<IActionResult> GetMyOrders()
+    {
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+        try
+        {
+            var data = await _service.GetMyOrders(userId);
             if (data != null)
             {
                 return Ok(data);

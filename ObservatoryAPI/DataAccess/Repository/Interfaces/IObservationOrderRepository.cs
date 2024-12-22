@@ -5,4 +5,5 @@ namespace ObservatoryAPI.DataAccess.Repository.Interfaces;
 
 public interface IObservationOrderRepository : IRepo<ObservationOrder, int>
 {
+    Task<List<ObservationOrder>> GetMyOrders(int userId);
 }

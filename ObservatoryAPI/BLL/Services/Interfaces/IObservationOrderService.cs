@@ -6,4 +6,5 @@ namespace ObservatoryAPI.BLL.Services.Interfaces;
 
 public interface IObservationOrderService : ICrud<ObservationOrder, CreateObservationOrderDTO>
 {
+    Task<List<ObservationOrder>> GetMyOrders(int userId);
 }

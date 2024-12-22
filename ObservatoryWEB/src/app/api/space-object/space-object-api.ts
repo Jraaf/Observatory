@@ -2,7 +2,7 @@ import { instance } from '../instance';
 import { SpaceObjectDto, SpaceObject } from './space-object-api.types';
 
 class SpaceObjectApi {
-  static async getAll() {
+  async getAll() {
     return await instance.get<SpaceObject[]>('/SpaceObject/GetAll');
   }
 

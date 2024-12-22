@@ -1,5 +1,8 @@
 import { instance } from '../instance';
-import { SpaceObjectDto, SpaceObject } from './space-object-api.types';
+import {
+  SpaceObjectDto,
+  SpaceObject,
+} from './space-observation-object-api.types';
 
 class SpaceObjectApi {
   async getAll() {

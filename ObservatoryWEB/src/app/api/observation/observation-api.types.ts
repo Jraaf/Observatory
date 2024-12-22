@@ -1,6 +1,6 @@
 export interface ObservationDto {
   name: string;
-  sceduledTime: Date;
+  scheduledTime: Date;
   spaceObjectId: number;
   equipmentId: number;
   userId: number;
@@ -11,7 +11,7 @@ export interface Observation {
   name: string;
   description: string;
   properties: string;
-  sceduledTime: Date;
+  scheduledTime: Date;
   spaceObjectId: number;
   equipmentId: number;
 }

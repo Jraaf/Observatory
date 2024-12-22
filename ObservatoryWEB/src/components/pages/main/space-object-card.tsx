@@ -1,6 +1,6 @@
 'use client';
 
-import { SpaceObject } from '@/app/api/space-object/space-object-api.types';
+import { SpaceObject } from '@/app/api/space-object/space-observation-object-api.types';
 import { MapPinIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';

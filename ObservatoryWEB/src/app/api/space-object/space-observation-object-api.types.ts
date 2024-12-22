@@ -1,3 +1,5 @@
+import { Research } from '../research/research-api.types';
+
 export interface SpaceObjectDto {
   name: string;
   photoUrl: string;
@@ -11,5 +13,5 @@ export interface SpaceObject {
   photoUrl: string;
   description: string;
   location: string;
-  researches: null;
+  researches: Research[] | null;
 }

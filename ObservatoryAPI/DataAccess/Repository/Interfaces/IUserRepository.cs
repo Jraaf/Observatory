@@ -7,4 +7,5 @@ public interface IUserRepository : IRepo<User, int>
 {
     Task<bool> UserExists(string username);
     Task<User> GetByUsername(string username);
+    Task<User> GetMe(int userId);
 }

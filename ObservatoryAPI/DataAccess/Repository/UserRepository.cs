@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ObservatoryAPI.BLL;
 using ObservatoryAPI.DataAccess.EF;
 using ObservatoryAPI.DataAccess.Entities;
 using ObservatoryAPI.DataAccess.Repository.Base;
@@ -18,6 +19,12 @@ public class UserRepository : Repo<User, int>, IUserRepository
     {
         return await _context.Users.FirstOrDefaultAsync(x =>
                      x.Username.ToLower() == username.ToLower());
+    }
+
+    public async Task<User> GetMe(int userId)
+    {
+        return await _context.Users.FirstOrDefaultAsync(x => x.Id == userId)
+            ?? throw new NotFoundException(userId);
     }
 
     public async Task<bool> UserExists(string username)

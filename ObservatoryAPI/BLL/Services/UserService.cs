@@ -96,4 +96,9 @@ public class UserService(IUserRepository _repo, IConfiguration _config, IMapper 
     {
         return await _repo.UserExists(username);
     }
+
+    public async Task<User> GetMe(int userId)
+    {
+        return await _repo.GetMe(userId);
+    }
 }

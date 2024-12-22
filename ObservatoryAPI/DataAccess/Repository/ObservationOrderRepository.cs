@@ -24,6 +24,7 @@ public class ObservationOrderRepository : Repo<ObservationOrder, int>, IObservat
     public async Task<List<ObservationOrder>> GetMyOrders(int userId)
     {
         return await context.Orders
+            .Include(o=>o.Observation)
             .Where(o => o.UserId == userId)
             .ToListAsync();
     }

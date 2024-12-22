@@ -11,7 +11,6 @@ interface Props {
 export const ObservationOrderCard: FC<Props> = ({
   observation: { description, scheduledTime, name, properties },
 }) => {
-  console.log(scheduledTime);
   return (
     <div>
       <li className='transform rounded-lg border bg-white object-cover p-4 shadow-md transition-transform duration-500 hover:scale-105 hover:shadow-lg'>

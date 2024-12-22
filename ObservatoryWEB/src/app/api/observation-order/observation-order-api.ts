@@ -16,10 +16,6 @@ class ObservationOrderApi {
     );
   }
 
-  async getAvailableOrders() {
-    return await instance.get<ObservationOrder[]>('/ObservationOrder/GetAll');
-  }
-
   async getObservationOrderById(id: number) {
     return await instance.get<ObservationOrder>(
       `/ObservationOrder/GetAvailableOrders`,

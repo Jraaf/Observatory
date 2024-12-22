@@ -2,7 +2,7 @@ import { instance } from '../instance';
 import { Observation, ObservationDto } from './observation-api.types';
 
 class ObservationApi {
-  static async getAll() {
+  async getAll() {
     return await instance.get<Observation[]>('/Observation/GetAll');
   }
 

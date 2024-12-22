@@ -14,7 +14,7 @@ export const SingleSpaceObjectCard: FC<Props> = ({
   spaceObject: { description, location, name, photoUrl, researches },
 }) => {
   return (
-    <div className='transform rounded-lg border bg-white object-cover p-4 shadow-md transition-transform duration-500 hover:scale-105 hover:shadow-lg'>
+    <div className='transform rounded-lg border bg-white object-cover p-4 shadow-md transition-shadow duration-500 hover:shadow-lg'>
       <h3 className='mb-2 text-xl font-semibold text-gray-800'>{name}</h3>
       <p className='mb-2 text-sm text-gray-600'>{description}</p>
       <p className='mb-4 flex items-center text-xs text-gray-500'>

@@ -15,7 +15,12 @@ public class ObservationOrderRepository : Repo<ObservationOrder, int>, IObservat
     {
         this.context = context;
     }
-
+    public async new Task<List<ObservationOrder>> GetAllAsync()
+    {
+        return await context.Orders
+            .Include(o => o.Observation)
+            .ToListAsync();
+    }
     public async Task<List<ObservationOrder>> GetMyOrders(int userId)
     {
         return await context.Orders

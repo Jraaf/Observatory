@@ -3,7 +3,6 @@ export interface LoginBody {
   password: string;
 }
 export interface RegisterBody {
-  email: string;
   username: string;
   password: string;
   isAdmin: boolean;

@@ -25,7 +25,6 @@ export const RegisterForm = () => {
   const form = useForm<TSignUp>({
     resolver: zodResolver(SignUpSchema),
     defaultValues: {
-      email: '',
       password: '',
       username: '',
       confirmPassword: '',
@@ -35,7 +34,6 @@ export const RegisterForm = () => {
   async function onSubmit(values: TSignUp) {
     try {
       const { data } = await authApi.register({
-        email: values.email,
         username: values.username,
         password: values.password,
         isAdmin: false,
@@ -55,18 +53,6 @@ export const RegisterForm = () => {
         onSubmit={form.handleSubmit(onSubmit)}
         className='flex w-full max-w-[440px] flex-col gap-5'
       >
-        <FormField
-          control={form.control}
-          name='email'
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className='text-sm font-normal'>Email</FormLabel>
-              <Input {...field} placeholder='Email' />
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
         <FormField
           control={form.control}
           name='username'

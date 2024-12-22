@@ -4,7 +4,7 @@ export function LoadingPage() {
   return (
     <div className='flex min-h-[90vh] w-full flex-col items-center justify-center'>
       <span>
-        <Loader size='large' />
+        <Loader size='lg' />
       </span>
       <span className='text-center text-xl font-medium'>Завантаження...</span>
     </div>

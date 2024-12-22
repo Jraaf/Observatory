@@ -1,20 +1,14 @@
 import { Loader2 } from 'lucide-react';
 
 const sizeMapper = {
-  small: 75,
-  medium: 100,
-  large: 160,
+  xs: 50,
+  sm: 75,
+  md: 100,
+  lg: 160,
 };
 
-export function Loader({
-  size = 'medium',
-}: {
-  size?: 'small' | 'medium' | 'large';
-}) {
+export function Loader({ size = 'md' }: { size?: keyof typeof sizeMapper }) {
   return (
-    <Loader2
-      className='mb-7 animate-spin text-violet-700'
-      size={sizeMapper[size]}
-    />
+    <Loader2 className='animate-spin text-violet-700' size={sizeMapper[size]} />
   );
 }

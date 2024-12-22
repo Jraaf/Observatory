@@ -1,9 +1,8 @@
 import { z } from 'zod';
-import { emailSchema, usernameSchema } from './common.schemas';
+import { usernameSchema } from './common.schemas';
 
 export const SignUpSchema = z
   .object({
-    email: emailSchema,
     username: usernameSchema,
     password: z
       .string({ required_error: 'Введіть пароль' })

@@ -15,7 +15,7 @@ class AuthApi {
   }
 
   async getMe() {
-    return await instance.get<User>('/Authentification/me');
+    return await instance.get<User>('/Authentification/GetMe');
   }
 }
 

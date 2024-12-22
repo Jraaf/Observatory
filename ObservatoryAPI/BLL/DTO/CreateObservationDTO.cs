@@ -8,5 +8,4 @@ public class CreateObservationDTO
     public DateTime SceduledTime { get; set; }
     public int SpaceObjectId { get; set; }
     public int EquipmentId { get; set; }
-    public int UserId { get; set; }
 }

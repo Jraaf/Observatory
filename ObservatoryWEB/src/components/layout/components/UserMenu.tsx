@@ -35,11 +35,11 @@ export const UserMenu: FC = () => {
               push('/auth/sign-in');
             }}
           >
-            Sign out
+            Вийти
           </div>
         </DropdownMenuItem>
         <DropdownMenuItem asChild className='cursor-pointer p-3 text-xl'>
-          <Link href={`/profile`}>Profile</Link>
+          <Link href={`/profile`}>Профіль</Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -16,12 +16,12 @@ export const AddEquipmentFormDialog: FC = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>Add equipment</Button>
+        <Button>Додати телескоп</Button>
       </DialogTrigger>
       <DialogContent className='my-6 w-[90%] max-w-[767px] rounded-md px-6 py-6 md:px-8 md:py-8 lg:px-10'>
         <DialogHeader>
           <DialogTitle className='xs:text-2xl mb-4 text-center text-xl lg:text-3xl'>
-            Add equipment
+            Додати телескоп
           </DialogTitle>
           <DialogDescription hidden> modal</DialogDescription>
         </DialogHeader>

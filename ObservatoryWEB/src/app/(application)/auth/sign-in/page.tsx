@@ -4,15 +4,15 @@ import Link from 'next/link';
 
 const SignInPage: React.FC = () => {
   return (
-    <section className='flex h-full flex-col gap-8 items-center justify-center py-[10%]'>
-      <h2 className='font-medium text-2xl'>Log in</h2>
+    <section className='flex h-full flex-col items-center justify-center gap-8 py-[10%]'>
+      <h2 className='text-2xl font-medium'>Увійти</h2>
 
       <LoginForm />
 
-      <p className='text-sm text-center'>
-        Don`t have an account?
+      <p className='text-center text-sm'>
+        Немає аккаунту?
         <Link href='/auth/sign-up'>
-          <Button variant='link'>Sign up</Button>
+          <Button variant='link'>Зареєструватись</Button>
         </Link>
       </p>
     </section>

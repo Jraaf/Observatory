@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { getQueryClient } from '../api/get-query-client';
 import { spaceObjectApi } from '../api/space-object/space-object-api';
-import { AddTrackFormDialog } from '@/components/pages/main/add-space-object-form-dialog';
+import { AddSpaceObjectFormDialog } from '@/components/pages/main/add-space-object-form-dialog';
 import { SpaceObjectCard } from '@/components/pages/main/space-object-card';
 
 interface Props {}
@@ -16,9 +16,11 @@ const Page: FC<Props> = async () => {
   return (
     <div className='mx-auto max-w-[1280px] px-2'>
       <div className='flex items-center justify-between'>
-        <h2 className='my-4 text-center text-3xl font-bold'>Space Objects</h2>
+        <h2 className='my-4 text-center text-3xl font-bold'>
+          Космічні об&apos;єкти
+        </h2>
 
-        <AddTrackFormDialog />
+        <AddSpaceObjectFormDialog />
       </div>
 
       <ul className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>

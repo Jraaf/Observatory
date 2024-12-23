@@ -86,7 +86,10 @@ export const AddObservationOrderForm: FC<Props> = ({ userId }) => {
                       className='flex flex-col space-y-1'
                     >
                       {data?.map((observation) => (
-                        <FormItem className='flex items-center space-x-3 space-y-0'>
+                        <FormItem
+                          key={observation.id}
+                          className='flex items-center space-x-3 space-y-0'
+                        >
                           <FormControl>
                             <RadioGroupItem value={observation.id + ''} />
                           </FormControl>

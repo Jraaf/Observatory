@@ -1,7 +1,6 @@
 'use client';
 
 import { FC } from 'react';
-import { User } from '@/lib/types/auth.types';
 import { useQuery } from '@tanstack/react-query';
 import { equipmentApi } from '@/app/api/equipment/equipment-api';
 import { EquipmentCard } from './equipment-card';
@@ -19,9 +18,9 @@ export const AdminProfilePage: FC<Props> = () => {
   });
 
   return (
-    <div>
+    <div className='mx-auto max-w-[1280px] px-2'>
       <div className='flex items-center justify-between'>
-        <h2 className='mb-6 text-2xl font-bold'>Equipment</h2>
+        <h2 className='mb-6 text-2xl font-bold'>Телескопи</h2>
         <AddEquipmentFormDialog />
       </div>
 

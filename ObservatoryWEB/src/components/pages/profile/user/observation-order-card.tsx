@@ -17,10 +17,10 @@ export const ObservationOrderCard: FC<Props> = ({
         <h3 className='mb-2 text-xl font-semibold text-gray-800'>{name}</h3>
         <p className='mb-2 text-sm text-gray-600'>{description}</p>
         {properties && (
-          <p className='mt-4 font-semibold'>Properties: {properties}</p>
+          <p className='mt-4 font-semibold'>Xарактеристики: {properties}</p>
         )}
         <p className='mb-4 flex items-center text-xs text-gray-500'>
-          Scheduled time: {formatDateTime(scheduledTime)}
+          Час проведення: {formatDateTime(scheduledTime)}
         </p>
       </li>
     </div>

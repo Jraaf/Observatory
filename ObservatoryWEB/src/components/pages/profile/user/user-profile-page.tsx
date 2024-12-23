@@ -10,7 +10,7 @@ interface Props {
   user: User;
 }
 
-export const UserProfilePage: FC<Props> = ({ user: { id, username } }) => {
+export const UserProfilePage: FC<Props> = ({ user: { id } }) => {
   const { data } = useQuery({
     queryKey: ['observation-orders-by-user-id', id],
     queryFn: observationOrderApi.getMyOrders,
@@ -21,7 +21,7 @@ export const UserProfilePage: FC<Props> = ({ user: { id, username } }) => {
 
   return (
     <div>
-      <h2 className='mb-6 text-2xl font-bold'>Your observation orders</h2>
+      <h2 className='mb-6 text-2xl font-bold'>Ваші записи на спостереження</h2>
       <ul className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
         {data?.map((obsservationOrder) => (
           <ObservationOrderCard

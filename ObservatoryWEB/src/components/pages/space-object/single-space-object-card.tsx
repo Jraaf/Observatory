@@ -3,7 +3,6 @@
 import { SpaceObject } from '@/app/api/space-object/space-observation-object-api.types';
 import { MapPinIcon } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FC } from 'react';
 
 interface Props {
@@ -33,7 +32,7 @@ export const SingleSpaceObjectCard: FC<Props> = ({
 
       {!!researches?.length && (
         <>
-          <h4 className='mt-4 font-semibold'>Researches:</h4>
+          <h4 className='mt-4 font-semibold'>Дослідження:</h4>
           {researches?.map((research) => (
             <div key={research.id}>
               <h4>{research.text}</h4>

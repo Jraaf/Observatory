@@ -34,7 +34,7 @@ export const LoginForm = () => {
     try {
       const { data } = await authApi.login(values);
       await setAuthToken(data.accessToken);
-      toastSuccess('Login successfully');
+      toastSuccess('Ви успішно увійшли');
       push('/');
     } catch (error) {
       toastError(error);
@@ -52,8 +52,8 @@ export const LoginForm = () => {
           name='username'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-normal'>Username</FormLabel>
-              <Input {...field} />
+              <FormLabel className='text-sm font-normal'>Юзернейм</FormLabel>
+              <Input {...field} placeholder='Юзернейм' />
               <FormMessage />
             </FormItem>
           )}
@@ -64,8 +64,8 @@ export const LoginForm = () => {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-normal'>Password</FormLabel>
-              <PasswordInput placeholder='Password' {...field} />
+              <FormLabel className='text-sm font-normal'>Пароль</FormLabel>
+              <PasswordInput placeholder='Пароль' {...field} />
               <FormMessage />
             </FormItem>
           )}
@@ -76,7 +76,7 @@ export const LoginForm = () => {
           className='w-full'
           disabled={form.formState.isSubmitting}
         >
-          Sign in
+          Увійти
         </Button>
       </form>
     </Form>

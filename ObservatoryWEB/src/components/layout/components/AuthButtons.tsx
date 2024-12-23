@@ -7,12 +7,12 @@ export const AuthButtons: FC = () => {
     <div className='flex items-center gap-2'>
       <Link href='/auth/sign-in'>
         <Button variant='default' className='flex items-center gap-3'>
-          Log in
+          Увійти
         </Button>
       </Link>
       <Link href='/auth/sign-up'>
         <Button variant='outline' className='flex items-center gap-3'>
-          Sign up
+          Зареєструватись
         </Button>
       </Link>
     </div>

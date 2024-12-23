@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 import { AddSpaceObjectForm } from './add-space-object-form';
 import useAuth from '@/lib/hooks/useAuth';
 
-export const AddTrackFormDialog: FC = () => {
+export const AddSpaceObjectFormDialog: FC = () => {
   const { user } = useAuth();
 
   const isAdmin = !!user?.isAdmin;

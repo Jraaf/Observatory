@@ -40,7 +40,7 @@ export const RegisterForm = () => {
       });
 
       await setAuthToken(data.accessToken);
-      toastSuccess('Account created successfully');
+      toastSuccess('Акаунт успішно створено');
       push('/');
     } catch (error) {
       toastError(error);
@@ -58,8 +58,8 @@ export const RegisterForm = () => {
           name='username'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-normal'>Username</FormLabel>
-              <Input {...field} placeholder='Username' />
+              <FormLabel className='text-sm font-normal'>Юзернейм</FormLabel>
+              <Input {...field} placeholder='Юзернейм' />
               <FormMessage />
             </FormItem>
           )}
@@ -70,8 +70,8 @@ export const RegisterForm = () => {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-normal'>Password</FormLabel>
-              <PasswordInput placeholder='Password' {...field} />
+              <FormLabel className='text-sm font-normal'>Пароль</FormLabel>
+              <PasswordInput placeholder='Пароль' {...field} />
               <FormMessage />
             </FormItem>
           )}
@@ -83,9 +83,9 @@ export const RegisterForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className='text-sm font-normal'>
-                Confirm Password
+                Підтвердіть пароль
               </FormLabel>
-              <PasswordInput {...field} placeholder='Confirm Password' />
+              <PasswordInput {...field} placeholder='Підтвердіть пароль' />
               <FormMessage />
             </FormItem>
           )}
@@ -96,7 +96,7 @@ export const RegisterForm = () => {
           className='w-full'
           disabled={form.formState.isSubmitting}
         >
-          Sign Up
+          Зареєструватись
         </Button>
       </form>
     </Form>

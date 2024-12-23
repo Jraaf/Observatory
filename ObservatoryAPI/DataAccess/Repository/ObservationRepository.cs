@@ -15,4 +15,10 @@ public class ObservationRepository : Repo<Observation, int>, IObservationReposit
     {
         this.context = context;
     }
+    public async new Task<List<Observation>> GetAllAsync()
+    {
+        return await context.Observations
+            .Include(o=>o.Equipment)
+            .ToListAsync();
+    }
 }
